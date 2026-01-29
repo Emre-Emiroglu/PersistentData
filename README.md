@@ -1,10 +1,8 @@
-<img src="icon.jpg" width="512" height="512" alt="HMPersistentData Logo">
-
-# HMPersistentData
-HMPersistentData is a flexible and extendable data persistence system designed for Unity applications. It provides a simple API for saving, loading, and deleting data using various serialization strategies, including encrypted and unencrypted JSON.
+# PersistentData
+PersistentData is a flexible and extendable data persistence system designed for Unity applications. It provides a simple API for saving, loading, and deleting data using various serialization strategies, including encrypted and unencrypted JSON.
 
 ## Features
-HMPersistentData offers a modular and secure data persistence solution:
+PersistentData offers a modular and secure data persistence solution:
 * Save / Load / Delete / DeleteAll: Save and retrieve any serializable object type or delete them individually or all at once.
 * Serializer Selection: Choose between default JSON and AES-encrypted JSON serializers.
 * Custom Key & IV Support: For encrypted serialization, specify your own key and IV values to secure data.
@@ -12,21 +10,21 @@ HMPersistentData offers a modular and secure data persistence solution:
   * Opening the save file location.
   * Clearing all saved data.
   * Changing serializer settings via a `ScriptableObject` config.
-  * Automatically creating and updating the config asset at `Assets/Resources/HMPersistentData/PersistentDataConfig.asset`.
+  * Automatically creating and updating the config asset at `Assets/Resources/PersistentData/PersistentDataConfig.asset`.
 * Static Utility Access: Use PersistentDataServiceUtilities to perform all operations statically. You can initialize the system in two ways:
-  * Automatically, using the `PersistentDataConfig` asset from `Resources/HMPersistentData`.
+  * Automatically, using the `PersistentDataConfig` asset from `Resources/PersistentData`.
   * Manually, by providing the serializer type, file extension, and (if needed) encryption Key & IV directly via parameters.
 
 ## Getting Started
 Install via UPM with git URL
 
-`https://github.com/Emre-Emiroglu/HMPersistentData.git`
+`https://github.com/Emre-Emiroglu/PersistentData.git`
 
 Clone the repository
 ```bash
-git clone https://github.com/Emre-Emiroglu/HMPersistentData.git
+git clone https://github.com/Emre-Emiroglu/PersistentData.git
 ```
-This project is developed using Unity version 6000.0.42f1.
+This project is developed using Unity version 6000.2.6f2.
 
 ## Usage
 * Saving Data:
@@ -47,10 +45,10 @@ This project is developed using Unity version 6000.0.42f1.
     PersistentDataUtilities.DeleteAll();
     ```
 * Changing Serializer Type (Editor Only):
-  * Open the Editor window: `Tools > HMPersistentData > PersistentDataEditor`.
+  * Open the Editor window: `Tools > PersistentData > PersistentDataEditor`.
   * Select between `JsonSerializer` and `EncryptedJsonSerializer`.
   * For `EncryptedJsonSerializer`, input your custom AES Key and IV in Base64.
-  * All settings are saved into a ScriptableObject located at: `Assets/Resources/HMPersistentData/PersistentDataConfig.asset`.
+  * All settings are saved into a ScriptableObject located at: `Assets/Resources/PersistentData/PersistentDataConfig.asset`.
   * This file is auto-created if missing.
 
 * Error Handling:

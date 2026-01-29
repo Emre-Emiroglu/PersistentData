@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.IO;
-using HMPersistentData.Runtime;
 using NUnit.Framework;
+using PersistentData.Runtime;
 using UnityEngine.TestTools;
 
-namespace HMPersistentData.Tests.PlayMode
+namespace PersistentData.Tests.PlayMode
 {
     public sealed class PersistentDataServicePlayModeTests
     {

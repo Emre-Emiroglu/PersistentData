@@ -3,7 +3,7 @@ using System.IO;
 using System.Security.Cryptography;
 using Newtonsoft.Json;
 
-namespace HMPersistentData.Runtime
+namespace PersistentData.Runtime
 {
     /// <summary>
     /// Provides encrypted JSON serialization and deserialization using AES encryption.

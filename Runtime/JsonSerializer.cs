@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace HMPersistentData.Runtime
+namespace PersistentData.Runtime
 {
     /// <summary>
     /// Provides JSON-based serialization and deserialization using Newtonsoft.Json.

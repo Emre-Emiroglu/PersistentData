@@ -1,14 +1,14 @@
 ﻿using System.IO;
-using HMPersistentData.Runtime;
+using PersistentData.Runtime;
 using UnityEditor;
 using UnityEngine;
 
-namespace HMPersistentData.Editor
+namespace PersistentData.Editor
 {
     public sealed class PersistentDataEditor : EditorWindow
     {
         #region Constants
-        private const string MenuItem = "Tools/HMPersistentData/PersistentDataEditor";
+        private const string MenuItem = "Tools/PersistentData/PersistentDataEditor";
         private const string Name = "Persistent Data Editor";
         private const float MinWidth = 256;
         private const float MaxWidth = 512;
@@ -18,7 +18,7 @@ namespace HMPersistentData.Editor
         private const string InitializeButtonText = "Initialize Persistent Data Service";
         private const string OpenPersistentDataButtonText = "Open Persistent Data Path";
         private const string DeleteAllSavedDataButtonText = "Delete All Saved Data";
-        private const string ConfigFolderPath = "Assets/Resources/HMPersistentData";
+        private const string ConfigFolderPath = "Assets/Resources/PersistentData";
         private const string ConfigAssetPath = ConfigFolderPath + "/PersistentDataConfig.asset";
         #endregion
 
@@ -39,7 +39,7 @@ namespace HMPersistentData.Editor
         private void OnEnable() => LoadOrCreateConfig();
         private void OnGUI()
         {
-            if (_config == null)
+            if (!_config)
             {
                 EditorGUILayout.HelpBox(ConfigAssetNotFoundMessage, MessageType.Error);
                 

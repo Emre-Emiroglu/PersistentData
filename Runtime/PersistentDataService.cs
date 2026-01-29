@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using UnityEngine;
 
-namespace HMPersistentData.Runtime
+namespace PersistentData.Runtime
 {
     /// <summary>
     /// Provides functionality for saving, loading, and deleting persistent data using a specified serializer.

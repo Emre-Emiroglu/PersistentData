@@ -1,8 +1,8 @@
 ﻿using System.IO;
-using HMPersistentData.Runtime;
 using NUnit.Framework;
+using PersistentData.Runtime;
 
-namespace HMPersistentData.Tests.EditMode
+namespace PersistentData.Tests.EditMode
 {
     public sealed class PersistentDataServiceEditModeTests
     {
@@ -15,7 +15,7 @@ namespace HMPersistentData.Tests.EditMode
         [SetUp]
         public void SetUp()
         {
-            _testPath = Path.Combine(Path.GetTempPath(), "HMPersistentDataTests");
+            _testPath = Path.Combine(Path.GetTempPath(), "PersistentDataTests");
             Directory.CreateDirectory(_testPath);
             _service = new PersistentDataService(new JsonSerializer(), TestFileExtension);
 

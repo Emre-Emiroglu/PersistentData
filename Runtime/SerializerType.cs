@@ -1,4 +1,4 @@
-﻿namespace HMPersistentData.Runtime
+﻿namespace PersistentData.Runtime
 {
     public enum SerializerType : int
     {

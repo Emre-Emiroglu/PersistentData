@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using UnityEngine;
 
-namespace HMPersistentData.Runtime
+namespace PersistentData.Runtime
 {
     /// <summary>
     /// Provides static utility methods for initializing and interacting with the persistent data service.
@@ -15,7 +15,7 @@ namespace HMPersistentData.Runtime
         #region Core
         /// <summary>
         /// Initializes the persistent data service using the <c>PersistentDataConfig</c> ScriptableObject 
-        /// located in the <c>Resources/HMPersistentData/PersistentDataConfig.asset</c> path.
+        /// located in the <c>Resources/PersistentData/PersistentDataConfig.asset</c> path.
         /// </summary>
         /// <para>
         /// If the config is not found, initialization is aborted and an error is logged.
@@ -23,9 +23,9 @@ namespace HMPersistentData.Runtime
         public static void Initialize()
         {
             PersistentDataConfig config =
-                Resources.Load<PersistentDataConfig>(nameof(HMPersistentData) + "/PersistentDataConfig");
+                Resources.Load<PersistentDataConfig>(nameof(PersistentData) + "/PersistentDataConfig");
             
-            if (config == null)
+            if (!config)
             {
                 LogConfigIsNullError();
                 
@@ -121,7 +121,7 @@ namespace HMPersistentData.Runtime
         public static void ThrowFileNotFoundException(string filePath) =>
             throw new FileNotFoundException($"File '{filePath}' not found.");
         private static void LogConfigIsNullError() =>
-            Debug.LogError("[HMPersistentData] Config is null. Initialization aborted.");
+            Debug.LogError("[PersistentData] Config is null. Initialization aborted.");
         #endregion
     }
 }

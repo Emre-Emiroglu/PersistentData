@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
-namespace HMPersistentData.Runtime
+namespace PersistentData.Runtime
 {
-    [CreateAssetMenu(fileName = "PersistentDataConfig", menuName = "HMPersistentData/PersistentDataConfig", order = 0)]
+    [CreateAssetMenu(fileName = "PersistentDataConfig", menuName = "PersistentData/PersistentDataConfig", order = 0)]
     public sealed class PersistentDataConfig : ScriptableObject
     {
         [Header("Persistent Data Settings")]

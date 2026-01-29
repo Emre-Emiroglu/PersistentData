@@ -1,4 +1,4 @@
-﻿namespace HMPersistentData.Runtime
+﻿namespace PersistentData.Runtime
 {
     /// <summary>
     /// Defines serialization and deserialization methods for converting data to and from string representations.

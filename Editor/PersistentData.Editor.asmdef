@@ -1,8 +1,12 @@
 {
-    "name": "HMPersistentData.Runtime",
-    "rootNamespace": "HMPersistentData.Runtime",
-    "references": [],
-    "includePlatforms": [],
+    "name": "PersistentData.Editor",
+    "rootNamespace": "PersistentData.Editor",
+    "references": [
+        "GUID:42ae9d6ab35ad7c43a2c75a2216dbc68"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
